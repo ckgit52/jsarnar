@@ -1,0 +1,703 @@
+<html>
+
+<head>
+    <title>biocrop</title>
+    <script src="https://kit.fontawesome.com/53314c48e7.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .overlay {
+            background: #0000007a;
+            height: 620px;
+        }
+
+        .part1 {
+            height: 100px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background-color: white;
+        }
+
+        .sec1 {
+            width: 30%;
+            color: green;
+            padding-top: 25px;
+            padding-left: 20px;
+            float: left;
+        }
+
+        .sec2 {
+            width: 70%;
+            float: left;
+            padding-left: 300px;
+            padding-top: 20px;
+        }
+
+        .sec2 ul {
+            padding-top: 20px;
+        }
+
+        .sec2 li {
+            display: inline;
+            margin-left: 30px;
+        }
+
+        .part1 a {
+            text-decoration: none;
+            color: #858585;
+        }
+
+        .part1::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .part2 {
+            background: url("a1.jpg");
+            width: 100%;
+            margin-top: 30px;
+            height: 620px;
+        }
+
+        .p1 {
+            width: 50%;
+            padding-top: 150px;
+            margin-left: 100px;
+        }
+
+        .p1 h1 {
+            color: white;
+            font-size: 45px;
+        }
+
+        .p1 p {
+            color: white;
+            font-size: 20px;
+        }
+
+        .p1 a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .part2::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .part3 {
+            height: 350px;
+            margin-top: 60px;
+        }
+
+        .sec3 {
+            width: 30%;
+            float: left;
+            margin-left: 100px;
+        }
+
+        .sec4 {
+            width: 30%;
+            float: left;
+            margin-left: 10px;
+        }
+
+        .sec5 {
+            width: 30%;
+            float: left;
+            margin-left: 10px;
+        }
+
+        .part3 img {
+            width: 350px;
+            height: 250px;
+        }
+
+        .part3::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .part4 {
+            background: url("a2.jpg");
+            width: 100%;
+            margin-top: 60px;
+            height: 620px;
+        }
+
+        .sec6 {
+            width: 30%;
+            color: white;
+            float: left;
+            margin-left: 120px;
+        }
+
+        .sec7 {
+            width: 40%;
+            float: left;
+            margin-right: 120px;
+            margin-left: 100px;
+        }
+
+        .sec7 img {
+            width: 570px;
+        }
+
+        .part4::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .part5 {
+            height: 500px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .sec8 {
+            width: 26%;
+            float: left;
+            margin-left: 150px;
+        }
+
+        .sec9 {
+            width: 26%;
+            float: left;
+        }
+
+        .sec10 {
+            width: 26%;
+            float: left;
+            margin-right: 50px;
+        }
+
+        .part5 img {
+            height: 250px;
+            width: 350px;
+        }
+
+        .part5::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .part6 {
+            background: url("59.jpg");
+            width: 100%;
+            margin-top: 60px;
+            height: 620px;
+        }
+
+        .part6 p {
+            font-size: 18px;
+            color: #777;
+        }
+
+        .part6 h3 {
+            color: #c3c3c3;
+        }
+
+        .sec11 {
+            width: 25%;
+            height: 265px;
+            float: left;
+            background-color: white;
+            margin-left: 150px;
+            margin-top: 170px;
+            padding-left: 10px;
+        }
+
+        .sec11 img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50px
+        }
+
+        .b1 {
+            width: 40%;
+            float: left;
+            margin-left: 20px;
+        }
+
+        .b2 {
+            width: 40%;
+            float: left;
+            margin-top: 20px;
+        }
+
+        .sec12 {
+            width: 25%;
+            height: 265px;
+            float: left;
+            background-color: white;
+            margin-left: 20px;
+            margin-top: 170px;
+            padding-left: 10px;
+        }
+
+        .sec12 img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50px;
+        }
+
+        .c1 {
+            width: 40%;
+            float: left;
+            margin-left: 20px;
+        }
+
+        .c2 {
+            width: 40%;
+            float: left;
+            margin-top: 20px;
+        }
+
+        .sec13 {
+            width: 25%;
+            height: 265px;
+            float: left;
+            background-color: white;
+            margin-left: 20px;
+            margin-top: 170px;
+            padding-left: 10px;
+        }
+
+        .sec13 img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50px;
+        }
+
+        .d1 {
+            width: 40%;
+            float: left;
+            margin-left: 20px;
+        }
+
+        .d2 {
+            width: 40%;
+            float: left;
+            margin-top: 20px;
+        }
+
+        .part6::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .part7 {
+            height: 360px;
+            margin-top: 60px;
+        }
+
+        .part7 p {
+            font-size: 17px;
+            padding-left: 10px;
+            color: #777;
+        }
+
+        .part7 h1 {
+            font-size: 40px;
+        }
+
+        .sec14 {
+            width: 40%;
+            float: left;
+            margin-left: 150px;
+        }
+
+        .sec14 img {
+            width: 540px;
+        }
+
+        .sec15 {
+            width: 40%;
+            float: left;
+            margin-right: 50px;
+            margin-left: 30px;
+        }
+
+        .s1 {
+            width: 45%;
+            float: left;
+            height: 260px;
+            border: solid #eee;
+            padding: 5px 5px;
+        }
+
+        .s2 {
+            width: 45%;
+            float: left;
+            height: 260px;
+            border: solid #eee;
+            margin-left: 20px;
+            padding: 5px 5px;
+        }
+
+        .part7::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .part8 {
+            height: 450px;
+            margin-top: 60px;
+            background-color: black;
+        }
+
+        .sec16 {
+            color: white;
+            width: 30%;
+            float: left;
+            margin-left: 150px;
+            margin-top: 50px;
+        }
+
+        .sec17 {
+            color: white;
+            width: 20%;
+            float: left;
+            margin-left: 40px;
+            margin-top: 50px;
+        }
+
+        .sec17 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .sec18 {
+            color: white;
+            width: 30%;
+            float: left;
+            margin-top: 50px;
+        }
+
+        .n1 {
+            width: 30%;
+            float: left;
+        }
+
+        .n1 img {
+            width: 100px;
+            height: 75px;
+        }
+
+        .n2 {
+            width: 50%;
+            float: left;
+            margin-left: 20px;
+        }
+
+        .part8::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        @media only screen and (max-width: 576px) {
+
+            .logo {
+                width: 100%;
+            }
+
+            .menu {
+                width: 100%;
+            }
+
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="part1">
+        <div class="sec1">
+
+            <h1><i class="fa-solid fa-seedling fa-xl"></i> Bio Crop</h1>
+        </div>
+        <div class="sec2">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Pages</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Get Started</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="part2">
+        <div class="overlay">
+            <div class="p1">
+                <h1>VEGETABLES AND FRUITS GOOD FOR HEALTH</h1>
+                <br>
+                <br>
+                <p>Conse ctetur Lorem ipsum dolor sit amet adipi sicing elit. Quae, velit recu sandae eum necessi
+                    tatibus bland itiis</p>
+                <br>
+                <br>
+                <a href="">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="part3">
+        <div class="sec3">
+            <h1>Experience the real agriculture</h1>
+            <br>
+            <br>
+            <p>Assumenda temporibus quidem ipsam. Voluptate fuga corporis iusto similique voluptates sint quibu sdamAss
+                umenda temporibus quidem ipsam. Voluptate fuga corporis iusto similique voluptates sint quibusdam.</p>
+            <br>
+            <br>
+            <a href="">Read More</a>
+        </div>
+        <div class="sec4">
+            <img src="50.jpg">
+            <h2>Our Mission</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet itaque labor.</p>
+        </div>
+        <div class="sec5">
+            <img src="51.jpg">
+            <h2>Our Vision</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet itaque labor.</p>
+        </div>
+    </div>
+
+
+    <div class="part4">
+        <div class="overlay">
+            <div class="sec6">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1>Organic Food - Farm Fresh Produce Right To Your Door</h1>
+                <br>
+                <br>
+                <h2>Fresh Vegetable</h2>
+                <br>
+                <p>Mollitia placeat modi explicabo voluptatum corporis unde Dicta, provident Rem adipisci Mollitia
+                    placeat modi explicabo.</p>
+                <br>
+                <h2>Fresh Fruits</h2>
+                <br>
+                <p>Mollitia placeat modi explicabo voluptatum corporis unde Dicta, provident Rem adipisci Mollitia
+                    placeat modi explicabo.</p>
+            </div>
+            <div class="sec7">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <img src="52.jpg">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="part5">
+        <div class="sec8">
+            <img src="53.jpg">
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1>Wheat Cultivation</h1>
+            <br>
+            <br>
+            <p>Assumenda temporibus quidem ipsam. Voluptate fuga corporis iusto similique voluptates sint quibusdam.</p>
+        </div>
+        <div class="sec9">
+            <br>
+            <br>
+            <br>
+            <h1>Cultivating</h1>
+            <br>
+            <br>
+            <p>Assumenda temporibus quidem ipsam. Voluptate fuga corporis iusto similique voluptates sint quibusdam.</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="54.jpg">
+        </div>
+        <div class="sec10">
+            <img src="55.jpg">
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1>Natural Product</h1>
+            <br>
+            <br>
+            <p>Assumenda temporibus quidem ipsam. Voluptate fuga corporis iusto similique voluptates sint quibusdam.</p>
+        </div>
+    </div>
+
+    <div class="part6">
+        <div class="overlay">
+            <div class="sec11">
+                <br>
+                <p>Conse ctetur adipis icing Lorem ipsum dolor sit amet,elit, sed do eiusmod tempor incid idunt ut
+                    labore et dolore magna aliqua. enim minim incid idunt ut labore et dolore magna aliqu.</p>
+                <br>
+                <div class="b1">
+                    <img src="56.jpg">
+                </div>
+                <div class="b2">
+                    <h3>Jack Willson</h3>
+                </div>
+            </div>
+            <div class="sec12">
+                <br>
+                <p>Conse ctetur adipis icing Lorem ipsum dolor sit amet,elit, sed do eiusmod tempor incid idunt ut
+                    labore et dolore magna aliqua. enim minim incid idunt ut labore et dolore magna aliqu.</p>
+                <br>
+                <div class="b1">
+                    <img src="57.jpg">
+                </div>
+                <div class="b2">
+                    <h3>Nike samson</h3>
+                </div>
+            </div>
+            <div class="sec13">
+                <br>
+                <p>Conse ctetur adipis icing Lorem ipsum dolor sit amet,elit, sed do eiusmod tempor incid idunt ut
+                    labore et dolore magna aliqua. enim minim incid idunt ut labore et dolore magna aliqu.</p>
+                <br>
+                <div class="b1">
+                    <img src="58.jpg">
+                </div>
+                <div class="b2">
+                    <h3>Milky Deo</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="part7">
+        <div class="sec14">
+            <br>
+            <img src="60.jpg">
+        </div>
+        <div class="sec15">
+            <h1>Fruitant market - Fruits, Vegetables & organic foods</h1>
+            <br>
+            <div class="s1">
+                <br>
+                <br>
+                <i class="fa-solid fa-seedling fa-2xl"></i>
+                <br>
+                <br>
+                <br>
+                <h2>Fruits and Vegetables</h2>
+                <br>
+                <br>
+                <p>Vivamus a ligula quam. Duis feugiat tortor sed Ut blandit. Duis feugiat tortor sed.</p>
+            </div>
+            <div class="s2">
+                <br>
+                <br>
+                <i class="fa-brands fa-apple fa-2xl"></i>
+                <br>
+                <br>
+                <br>
+                <h2>Organic and Natural</h2>
+                <br>
+                <br>
+                <p>Vivamus a ligula quam. Duis feugiat tortor sed Ut blandit. Duis feugiat tortor sed.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="part8">
+        <div class="sec16">
+            <h1>Bio Crop</h1>
+            <br>
+            <br>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe qui repellat nam vero consectetur dicta
+                eos suscipit. Numquam at minus architecto asperiores cupiditate. At molestias laborum voluptatibus
+                numquam aperiam in.</p>
+        </div>
+        <div class="sec17">
+            <h2>Useful Links</h2>
+            <br>
+            <br>
+            <br>
+            <ul>
+                <li><a href="">Home</a></li>
+                <br>
+                <li><a href="">About</a></li>
+                <br>
+                <li><a href="">Services</a></li>
+                <br>
+                <li><a href="">Blog posts</a></li>
+                <br>
+                <li><a href="">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="sec18">
+            <h2>Latest From Blog</h2>
+            <br>
+            <br>
+            <br>
+            <div class="n1">
+                <img src="s1.jpg">
+                <br>
+                <br>
+                <br>
+                <br>
+                <img src="s2.jpg">
+            </div>
+            <div class="n2">
+                <h4>How to Eat Organic Foods</h2>
+                    <br>
+                    <p>March 9, 2020</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h4>How to Eat Organic Foods</h2>
+                        <br>
+                        <p>March 9, 2020</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
